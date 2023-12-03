@@ -73,7 +73,9 @@ const deleteModal = (id) => {
         <div class="col-12">
             <div class="card">
                 <h5>Mata Kuliah</h5>
-                <Button label="Tambah Matakuliah" icon="pi pi-plus" class="p-button p-button-info my-3"></Button>
+                <router-link to="/matakuliah/tambah">
+                    <Button label="Tambah Matakuliah" icon="pi pi-plus" class="p-button p-button-info my-3"></Button>
+                </router-link>
                 <DataView :value="mataKuliah" :layout="layout" :paginator="true" :rows="9">
                     <template #grid="slotProps">
                         <div class="col-12 md:col-4">
