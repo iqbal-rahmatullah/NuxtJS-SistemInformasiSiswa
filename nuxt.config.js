@@ -3,13 +3,17 @@ export default defineNuxtConfig({
     typescript: false,
     app: {
         head: {
-            title: 'Sakai Vue',
+            title: 'Database Siswa',
             link: [
                 {
                     id: 'theme-css',
                     rel: 'stylesheet',
                     type: 'text/css',
                     href: '/themes/lara-light-indigo/theme.css'
+                }, {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: "https://img.icons8.com/?size=512&id=XKedzxVhRNPR&format=png"
                 }
             ]
         }
