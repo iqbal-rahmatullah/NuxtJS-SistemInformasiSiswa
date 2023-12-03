@@ -54,7 +54,7 @@ const getDataSiswa = async () => {
                         </div>
                     </Panel>
                     <Fieldset legend="Nilai Matakuliah" :toggleable="true" class="mt-5">
-                        <table class="p-datatable-table">
+                        <table class="p-datatable-table" v-if="nilaiSiswa.length > 0">
                             <tr>
                                 <th v-for="nilai in nilaiSiswa" :key="nilai._id" class="p-datatable-header border-1 p-3" style="border-collapse: collapse">{{ nilai.id_matkul.nama }}</th>
                             </tr>
@@ -62,6 +62,7 @@ const getDataSiswa = async () => {
                                 <td v-for="nilai in nilaiSiswa" :key="nilai._id" class="p-datatable-body border-1 p-3 text-center">{{ nilai.nilai }}</td>
                             </tr>
                         </table>
+                        <template v-else> Loading... </template>
                     </Fieldset>
                 </template>
                 <template v-else> Loading... </template>
